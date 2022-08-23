@@ -5,6 +5,6 @@
     "version": "1.0.0",
     "main": "pathToMain",
     "dependencies": {
-        "node-fetch": "^3.2.0"
+        "node-fetch": "^3.2.10"
     }
 }
