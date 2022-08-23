@@ -1,0 +1,10 @@
+{
+    "name": "MooVille",
+    "description": "a basic website that calls the GCal API to keep the schedule updated",
+    "authors": "Colin",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {
+        "node-fetch": "^3.2.0"
+    }
+}
