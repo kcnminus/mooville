@@ -84,6 +84,7 @@ function processDate(date){
 		time,
 		date: date.getDate()
 	}
+	console.log(date)
 }
 
 function mapEventObject(event){
