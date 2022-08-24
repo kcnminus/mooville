@@ -3,9 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-import { time } from 'console';
-import { start } from 'repl';
-import './style.css'
+
 (function($) {
 
 	var	$window = $(window),
@@ -125,10 +123,10 @@ function createEvent(e,i) {
 
 async function loadEvents(max=9){
 	try {
-		const endpoint = await fetch(`./.netlify/functions/calFetch?maxResults=${max}`)
+		const endpoint = await fetch(`./.netlify/functions/calFetch?maxResults=${max}`);
 		const data = await endpoint.json();
 		const processedEvents = data.map(e => mapEventObject(e));
-		eventContainer.innerHTML = processedEvents.map((event, i) => createEvent(event, i)).join('')
+		eventContainer.innerHTML = processedEvents.map((event, i) => createEvent(event, i)).join('');
 	} catch (e) {
 		eventContainer.innerHTML = `<p class="text-center text-3xl"> :screaming-cat: Something went wrong!</p>`
 		console.log(e);
