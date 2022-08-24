@@ -125,6 +125,7 @@ async function loadEvents(max=9){
 	try {
 		const endpoint = await fetch(`./.netlify/functions/calFetch?maxResults=${max}`);
 		const data = await endpoint.json();
+		console.log(data)
 		const processedEvents = data.map(e => mapEventObject(e));
 		eventContainer.innerHTML = processedEvents.map((event, i) => createEvent(event, i)).join('');
 	} catch (e) {
